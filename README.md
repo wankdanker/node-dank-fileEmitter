@@ -54,6 +54,29 @@ f.on('end', function (stat) {
 });
 ```
 
+stat
+----
+
+The stat object has additional properties of `path` and `name`; for example:
+
+```javascript
+{ dev: 2052,
+  mode: 33188,
+  nlink: 1,
+  uid: 1000,
+  gid: 1000,
+  rdev: 0,
+  blksize: 4096,
+  ino: 575051,
+  size: 2086,
+  blocks: 8,
+  atime: Fri Oct 05 2012 17:48:49 GMT-0400 (EDT),
+  mtime: Fri Oct 05 2012 17:46:03 GMT-0400 (EDT),
+  ctime: Fri Oct 05 2012 17:48:49 GMT-0400 (EDT),
+  path: '/tmp/node_modules/dank-fileemitter/README.md',
+  name: 'README.md'
+```
+
 similar work
 ---------------
 
