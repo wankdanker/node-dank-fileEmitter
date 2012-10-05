@@ -50,7 +50,7 @@ f.on('directory', function (stat) {
 });
 
 f.on('end', function (stat) {
-	console.long('all done');
+	console.log('all done');
 });
 ```
 
