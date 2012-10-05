@@ -1,0 +1,25 @@
+{
+  "name": "dank-fileemitter",
+  "version": "0.1.0",
+  "description": "Walk a directory (optionally recursively) and emit events for each object encountered",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "nodeunit test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wankdanker/node-dank-fileEmitter.git"
+  },
+  "keywords": [
+    "stat",
+    "walk",
+    "dir",
+    "emit",
+    "file"
+  ],
+  "author": "Dan VerWeire",
+  "license": "MIT"
+}
