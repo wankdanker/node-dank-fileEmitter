@@ -1,6 +1,6 @@
 {
   "name": "dank-fileemitter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Walk a directory (optionally recursively) and emit events for each object encountered",
   "main": "index.js",
   "directories": {
