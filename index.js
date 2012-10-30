@@ -60,7 +60,7 @@ FileEmitter.prototype.process = function (basePath, recursing) {
 		}
 		
 		if (!files.length) {
-			return self.emit('done');
+			return self.emit('end');
 		}
 		
 		self.statRequired += files.length;
