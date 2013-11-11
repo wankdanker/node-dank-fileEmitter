@@ -1,5 +1,7 @@
 var fs = require('fs')
 	, path = require('path')
+	, inherits = require('util').inherits
+	, events = require('events')
 	;
 
 module.exports = function (path, options) {
@@ -15,6 +17,8 @@ module.exports.FileEmitter = FileEmitter;
 function FileEmitter(options) {
 	var self = this;
 	
+	events.EventEmitter.call(this);
+
 	self.statCount = 0;
 	self.statRequired = 0;
 	
@@ -46,7 +50,7 @@ function FileEmitter(options) {
 	}
 };
 
-FileEmitter.prototype = new process.EventEmitter();
+inherits(FileEmitter, events.EventEmitter);
 
 FileEmitter.prototype.process = function (basePath, recursing) {
 	var self = this;
@@ -77,7 +81,7 @@ FileEmitter.prototype.process = function (basePath, recursing) {
 				}
 				
 				stat.path = filePath;
-				stat.name = file
+				stat.name = file;
 				
 				self.emitEvents(stat);
 				
